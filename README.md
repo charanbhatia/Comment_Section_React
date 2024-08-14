@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# React Comments Section
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based comments section developed. It allows users to add, edit, delete, and reply to comments. The application uses Redux for state management, styled-components for styling, and persists data using local storage to ensure comments are not lost on page refresh.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Add new comments
+- Reply to existing comments
+- Edit comments
+- Delete comments
+- Sort comments by date and time
+- Persistent storage using localStorage
+- Responsive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- Redux (with Redux Toolkit)
+- styled-components
+- localStorage for data persistence
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (version 12.0 or later)
+- npm (usually comes with Node.js)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```
+   git clone https://github.com/charanbhatia/HealthFlex_Assignment
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project directory:
+   ```
+   cd HealthFlex_Assignment
+   ```
 
-### `npm run eject`
+3. Install the dependencies:
+   ```
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
+   ```
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── Comment.js
+│   ├── CommentForm.js
+│   └── CommentsList.js
+├── slices/
+│   └── commentsSlice.js
+├── App.js
+├── index.js
+└── store.js
+```
 
-## Learn More
+- `components/`: Contains React components for comments, comment form, and comments list.
+- `slices/`: Contains Redux slice for managing comments state.
+- `App.js`: Main component that renders the application.
+- `store.js`: Configures the Redux store.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- To add a new comment, fill in the name and comment fields at the top of the page and click "POST".
+- To reply to a comment, click the "Reply" button under the comment and fill in the form that appears.
+- To edit a comment, click the "Edit" button, make your changes, and click "Save".
+- To delete a comment, click the "×" button in the top-right corner of the comment.
+- Comments are automatically sorted by date and time, with the most recent at the top.
 
-### Code Splitting
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project was created as part of a frontend engineering assignment for HealthyFlix.
